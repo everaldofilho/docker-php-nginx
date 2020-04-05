@@ -1,0 +1,14 @@
+# v2 syntax
+version: '2.1'
+services:
+  nginx-php:
+    build:
+      context: ./
+      args:
+        - INSTALL_XDEBUG=${INSTALL_XDEBUG}
+    container_name: nginx-php
+    volumes:
+      - ./:/var/www/html
+    # ports: 
+    #   - 80:80
+
